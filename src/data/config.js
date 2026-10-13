@@ -3,7 +3,8 @@ export const CONFIG = {
   brandName: 'CHECKPOINT10',
   shelfTheme: 'wood', // 'wood' | 'neon'
   shelfStyle: 'plank', // 'plank' | 'flat'
-  showNewButton: true,
+  // Los análisis nuevos se agregan al proyecto (games.json) y se publican con GitHub + Vercel.
+  showNewButton: false,
   // El prototipo enlazaba a MapaMundial.html, que no venía en el export.
   // Define VITE_MAP_URL en .env para mostrar el botón MAPA.
   mapUrl: import.meta.env.VITE_MAP_URL || null,

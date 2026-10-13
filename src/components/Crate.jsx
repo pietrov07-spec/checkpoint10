@@ -8,7 +8,8 @@ const on = (active) => (active ? ' is-active' : '');
 export function crateCards(games, idx, drag, style, dragging) {
   const n = games.length;
   const cards = [];
-  const relOf = (o) => (style === 'flow' ? o - -drag / 150 : o - drag / 150);
+  // Deslizar a la izquierda (drag < 0) acerca al frente la siguiente portada.
+  const relOf = (o) => o + drag / 150;
   for (let o = -4; o <= 5; o++) {
     const i = idx + o;
     if (i < 0 || i >= n) continue;
@@ -85,7 +86,7 @@ export default function Crate({ app }) {
         <div className="crate-pos">{(n ? idx + 1 : 0) + ' / ' + n}</div>
         <button type="button" className="round-btn" aria-label="Siguiente" onClick={app.crateNext}>→</button>
       </div>
-      <div className="crate-hint">{t(state.crateStyle === 'flow' ? 'crateHintFlow' : 'crateHint')}</div>
+      <div className="crate-hint">{t('crateHint')}</div>
       <div className="crate-legend">
         {PLATORDER.map((k) => (
           <span key={k}><span className="legend-sq" style={{ background: PLATCOLOR[k] }} />{PLAT[k]}</span>

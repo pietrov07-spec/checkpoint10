@@ -475,31 +475,38 @@ export default class App extends Component {
   crateOpen = () => { const g = this.shownGames[this.crateClamp(this.state.crateIndex)]; if (g) this.openFicha(g.id); };
   get crateDragging() { return !!this._cr; }
 
+  // Las portadas se hojean deslizando hacia los lados (en Cajón y en Coverflow). El gesto
+  // vertical queda para el navegador (touch-action: pan-y), así se puede bajar la página
+  // con el dedo sobre las portadas; cuando el navegador toma el gesto avisa con pointercancel.
   crateDown = (e) => {
     if (e.target.closest('[data-crate-open]')) return;
     this._cr = { y: e.clientY, x: e.clientX, moved: false };
-    if (e.currentTarget.setPointerCapture) e.currentTarget.setPointerCapture(e.pointerId);
     window.addEventListener('pointermove', this.crateMove);
     window.addEventListener('pointerup', this.crateUp);
+    window.addEventListener('pointercancel', this.crateCancel);
   };
   crateMove = (e) => {
     if (!this._cr) return;
-    // Cajón: se hojea hacia arriba/abajo. Coverflow: hacia los lados.
-    const d = this.state.crateStyle === 'flow' ? e.clientX - this._cr.x : e.clientY - this._cr.y;
     if (Math.hypot(e.clientX - this._cr.x, e.clientY - this._cr.y) > 4) this._cr.moved = true;
-    this.setState({ crateDrag: Math.max(-140, Math.min(140, d)) });
+    this.setState({ crateDrag: Math.max(-140, Math.min(140, e.clientX - this._cr.x)) });
   };
-  crateUp = () => {
+  crateEnd() {
     window.removeEventListener('pointermove', this.crateMove);
     window.removeEventListener('pointerup', this.crateUp);
-    const d = this.state.crateDrag, cr = this._cr;
+    window.removeEventListener('pointercancel', this.crateCancel);
+    const cr = this._cr;
     this._cr = null;
+    return cr;
+  }
+  crateUp = () => {
+    const d = this.state.crateDrag, cr = this.crateEnd();
     if (!cr) return;
     if (!cr.moved) { this.crateOpen(); this.setState({ crateDrag: 0 }); return; }
     if (d < -46) this.crateNext();
     else if (d > 46) this.cratePrev();
     else this.setState({ crateDrag: 0 });
   };
+  crateCancel = () => { this.crateEnd(); this.setState({ crateDrag: 0 }); };
 
   // ---------- torneo ----------
   setTour = () => {

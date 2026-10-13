@@ -52,7 +52,7 @@ tests/                  pruebas con Vitest
 3. Agrega sus enlaces en `src/data/links.json`.
 4. `npm test` revisa que no falte nada.
 
-Los juegos que se crean desde la app (**＋ NUEVO ANÁLISIS**) se guardan en el navegador de quien los crea.
+El botón **＋ NUEVO ANÁLISIS** está desactivado (`showNewButton: false` en `src/data/config.js`): los análisis se agregan aquí y se publican con GitHub + Vercel. Si lo reactivas, lo que se cree desde la app se guarda solo en el navegador de quien lo crea.
 
 ## Qué cambió respecto al prototipo
 

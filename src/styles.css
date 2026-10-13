@@ -169,7 +169,7 @@ h1, h2 { margin: 0; font-weight: inherit; }
 
 /* ---------- cajón móvil ---------- */
 .crate { margin-top: 10px; position: relative; z-index: 2; }
-.crate-stage { position: relative; height: 62vh; min-height: 380px; perspective: 1100px; touch-action: none; user-select: none; overflow: hidden; }
+.crate-stage { position: relative; height: 62vh; min-height: 380px; perspective: 1100px; touch-action: pan-y; user-select: none; overflow: hidden; }
 .crate-fade { position: absolute; left: 0; right: 0; bottom: 8%; height: 26%; background: linear-gradient(180deg,rgba(10,20,33,0),rgba(6,12,20,.85)); z-index: 99; pointer-events: none; }
 .crate-card { position: absolute; left: 50%; top: 6%; width: 70%; max-width: 300px; aspect-ratio: 3/4; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,.1); background: #12233b; will-change: transform; }
 .crate-plat-bar { position: absolute; top: 0; left: 0; right: 0; height: 6px; }
