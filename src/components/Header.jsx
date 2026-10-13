@@ -1,4 +1,4 @@
-import { CONFIG } from '../data/config.js';
+import { CONFIG, THEMES } from '../data/config.js';
 
 const on = (active) => (active ? ' is-active' : '');
 
@@ -23,6 +23,8 @@ export default function Header({ app }) {
         </div>
         {CONFIG.mapUrl && <a href={CONFIG.mapUrl} className="btn-outline">{t('map')}</a>}
         <button type="button" className={'btn-compare' + on(state.compareMode)} onClick={app.toggleCompareMode}>{t('compare')}</button>
+        {/* Solo en el celular: el tema junto a Comparar; cada toque cambia al siguiente. */}
+        <button type="button" className="btn-theme" onClick={app.cycleTheme} aria-label={t('theme') + ': ' + t(THEMES[app.themeKey].labelKey)}>◐ {t(THEMES[app.themeKey].labelKey)}</button>
         {CONFIG.showNewButton && (
           <button type="button" className="btn-primary btn-new" onClick={app.openCreator}>
             <span className="label-long">{t('neww')}</span><span className="label-short">{t('newShort')}</span>

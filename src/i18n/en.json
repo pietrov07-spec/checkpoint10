@@ -58,7 +58,7 @@
   "spanYears": "RELEASE SPAN",
   "timeHeading": "TIMELINE BY RELEASE YEAR",
   "released": "RELEASED",
-  "crateHint": "Swipe ←→ to flip through · tap the cover to open",
+  "crateHint": "Tap a cover to bring it forward · tap the front one to open it · you can also swipe ←→",
   "mobilePrev": "MOBILE",
   "crateA": "CRATE",
   "crateB": "COVERFLOW",

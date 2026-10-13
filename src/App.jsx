@@ -432,6 +432,7 @@ export default class App extends Component {
   tabPlatform = () => this.setState({ groupBy: 'platform', dragId: null, ghost: null });
   tabYear = () => this.setState({ groupBy: 'year', dragId: null, ghost: null });
   setTheme = (t) => this.setState({ theme: t });
+  cycleTheme = () => { const keys = Object.keys(THEMES); this.setTheme(keys[(keys.indexOf(this.themeKey) + 1) % keys.length]); };
   onQuery = (e) => this.setState({ query: e.target.value });
   clearQuery = () => this.setState({ query: '' });
   togglePlatform = (k) => this.setState((s) => ({ platFilter: s.platFilter === k ? null : k }));
@@ -480,7 +481,8 @@ export default class App extends Component {
   // con el dedo sobre las portadas; cuando el navegador toma el gesto avisa con pointercancel.
   crateDown = (e) => {
     if (e.target.closest('[data-crate-open]')) return;
-    this._cr = { y: e.clientY, x: e.clientX, moved: false };
+    const card = e.target.closest('[data-o]');
+    this._cr = { y: e.clientY, x: e.clientX, moved: false, o: card ? Number(card.dataset.o) : 0 };
     window.addEventListener('pointermove', this.crateMove);
     window.addEventListener('pointerup', this.crateUp);
     window.addEventListener('pointercancel', this.crateCancel);
@@ -501,7 +503,12 @@ export default class App extends Component {
   crateUp = () => {
     const d = this.state.crateDrag, cr = this.crateEnd();
     if (!cr) return;
-    if (!cr.moved) { this.crateOpen(); this.setState({ crateDrag: 0 }); return; }
+    if (!cr.moved) {
+      // Toque: la portada del frente abre su ficha; una de atrás o de adelante pasa al frente.
+      if (cr.o) this.crateGo(this.crateClamp(this.state.crateIndex) + cr.o);
+      else { this.crateOpen(); this.setState({ crateDrag: 0 }); }
+      return;
+    }
     if (d < -46) this.crateNext();
     else if (d > 46) this.cratePrev();
     else this.setState({ crateDrag: 0 });

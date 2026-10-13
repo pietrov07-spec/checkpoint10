@@ -173,7 +173,6 @@ export function MobileControls({ app }) {
               <SortGroup app={app} />
             </>
           )}
-          <ThemeGroup app={app} />
           <DataGroup app={app} />
           {!isTour && (
             <div className="m-options-foot">

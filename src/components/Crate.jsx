@@ -26,18 +26,20 @@ export function crateCards(games, idx, drag, style, dragging) {
     } else {
       let ty, tz, rx, scale;
       if (rel <= 0) { const d = Math.min(4, -rel); rx = -Math.min(72, d * 20); ty = d * 30; tz = d * 26; scale = 1 - d * 0.02; opacity = d > 4 ? 0 : 1; }
-      else { const d = rel; rx = Math.min(66, 26 + d * 9); ty = -d * 15; tz = -d * 66; scale = 1 - Math.min(d, 5) * 0.045; opacity = d > 5 ? 0 : 1; }
+      // Las que vienen asoman por arriba de la del frente (lo bastante para poder tocarlas).
+      else { const d = Math.min(rel, 4); rx = Math.min(24, 6 + d * 4); ty = -d * 58; tz = -d * 30; scale = 1 - d * 0.06; opacity = rel > 3.6 ? 0 : 1; }
       transform = `translateX(-50%) translateY(${ty}px) translateZ(${tz}px) rotateX(${rx}deg) scale(${scale})`;
       zi = rel <= 0 ? 200 + Math.round(rel * 10) : 100 - Math.round(rel);
     }
     cards.push({
-      g, z: zi, isFront,
+      g, o, z: zi, isFront,
       style: {
         transform, transformOrigin: style === 'flow' ? 'center center' : 'center bottom',
         transition: dragging ? 'none' : 'transform .42s cubic-bezier(.2,.8,.2,1)',
         opacity, zIndex: zi,
         boxShadow: isFront ? '0 30px 50px rgba(0,0,0,.6)' : '0 14px 26px rgba(0,0,0,.5)',
-        pointerEvents: isFront ? 'auto' : 'none',
+        // Todas las portadas visibles se pueden tocar: la del frente abre su ficha, las demás pasan al frente.
+        pointerEvents: opacity > 0 ? 'auto' : 'none',
       },
     });
   }
@@ -62,8 +64,8 @@ export default function Crate({ app }) {
       </div>
       <div className="crate-stage" onPointerDown={app.crateDown}>
         <div className="crate-fade" />
-        {cards.map(({ g, style }) => (
-          <div key={g.id} className="crate-card" style={style}>
+        {cards.map(({ g, o, style }) => (
+          <div key={g.id} data-o={o} className={'crate-card' + (state.crateStyle === 'crate' ? ' is-crate' : '')} style={style}>
             {g.hasArt ? <Cover game={g} sizes="300px" eager /> : <div className="abs-fill" style={{ background: g.genColor || '#12233b' }} />}
             <div className="crate-plat-bar" style={{ background: PLATCOLOR[g.platform] || '#5a6b7d' }} />
             <div className="crate-plat" style={{ background: PLATCOLOR[g.platform] || '#5a6b7d' }}>{PLATSHORT[g.platform] || ''}</div>
