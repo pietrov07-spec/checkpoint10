@@ -85,7 +85,7 @@ export default function Crate({ app }) {
         <div className="crate-pos">{(n ? idx + 1 : 0) + ' / ' + n}</div>
         <button type="button" className="round-btn" aria-label="Siguiente" onClick={app.crateNext}>→</button>
       </div>
-      <div className="crate-hint">{t('crateHint')}</div>
+      <div className="crate-hint">{t(state.crateStyle === 'flow' ? 'crateHintFlow' : 'crateHint')}</div>
       <div className="crate-legend">
         {PLATORDER.map((k) => (
           <span key={k}><span className="legend-sq" style={{ background: PLATCOLOR[k] }} />{PLAT[k]}</span>

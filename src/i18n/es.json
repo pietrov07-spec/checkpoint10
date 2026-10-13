@@ -59,6 +59,7 @@
   "timeHeading": "CRONOLOGÍA POR AÑO DE LANZAMIENTO",
   "released": "LANZAMIENTO",
   "crateHint": "Desliza ↑↓ para hojear · toca la portada para abrir",
+  "crateHintFlow": "Desliza ←→ para hojear · toca la portada para abrir",
   "mobilePrev": "MÓVIL",
   "crateA": "CAJÓN",
   "crateB": "COVERFLOW",

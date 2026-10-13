@@ -59,6 +59,7 @@
   "timeHeading": "TIMELINE BY RELEASE YEAR",
   "released": "RELEASED",
   "crateHint": "Swipe ↑↓ to flip through · tap the cover to open",
+  "crateHintFlow": "Swipe ←→ to flip through · tap the cover to open",
   "mobilePrev": "MOBILE",
   "crateA": "CRATE",
   "crateB": "COVERFLOW",

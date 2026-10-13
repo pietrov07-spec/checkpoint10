@@ -465,9 +465,10 @@ export default class App extends Component {
   };
   crateMove = (e) => {
     if (!this._cr) return;
-    const dy = e.clientY - this._cr.y;
-    if (Math.abs(dy) > 4) this._cr.moved = true;
-    this.setState({ crateDrag: Math.max(-140, Math.min(140, dy)) });
+    // Cajón: se hojea hacia arriba/abajo. Coverflow: hacia los lados.
+    const d = this.state.crateStyle === 'flow' ? e.clientX - this._cr.x : e.clientY - this._cr.y;
+    if (Math.hypot(e.clientX - this._cr.x, e.clientY - this._cr.y) > 4) this._cr.moved = true;
+    this.setState({ crateDrag: Math.max(-140, Math.min(140, d)) });
   };
   crateUp = () => {
     window.removeEventListener('pointermove', this.crateMove);
