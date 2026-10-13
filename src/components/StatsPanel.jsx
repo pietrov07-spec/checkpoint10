@@ -27,7 +27,7 @@ export default function StatsPanel({ app }) {
         <div className="stack-14">
           <div className="stile-row">
             <div className="stile stile-gold">
-              <div className="stile-eyebrow" style={{ color: '#c9b34e' }}>{t('overallAvg')}</div>
+              <div className="stile-eyebrow" style={{ color: 'var(--gold-dim)' }}>{t('overallAvg')}</div>
               <div className="stile-big">{s.overall.toFixed(1)}</div>
             </div>
             <div className="stile">
@@ -38,11 +38,11 @@ export default function StatsPanel({ app }) {
           <div className="stile-row">
             <div className="stile stile-sm">
               <div className="stile-eyebrow">{t('valuesMost')}</div>
-              <div className="stile-small" style={{ color: '#f4d84b' }}>{s.top}</div>
+              <div className="stile-small" style={{ color: 'var(--gold)' }}>{s.top}</div>
             </div>
             <div className="stile stile-sm">
               <div className="stile-eyebrow">{t('valuesLeast')}</div>
-              <div className="stile-small" style={{ color: '#e8908a' }}>{s.low}</div>
+              <div className="stile-small" style={{ color: 'var(--rose)' }}>{s.low}</div>
             </div>
           </div>
           <div className="stile stile-sm">

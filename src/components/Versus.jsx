@@ -48,11 +48,11 @@ export default function Versus({ app }) {
               <div key={lab} className="vs-row">
                 <div className="vs-side vs-left">
                   <div className="vs-bar" style={{ width: (on ? (av / 5) * 100 : 0) + '%', background: aWin ? a.accent : a.accent + '66', boxShadow: aWin ? '0 0 8px ' + a.accent + '88' : 'none', transitionDelay: delay }} />
-                  <div className="vs-num vs-num-l" style={{ color: aWin ? '#f4d84b' : '#8aa0bd' }}>{av}</div>
+                  <div className="vs-num vs-num-l" style={{ color: aWin ? 'var(--gold)' : 'var(--muted)' }}>{av}</div>
                 </div>
                 <div className="vs-label">{lab}</div>
                 <div className="vs-side vs-right">
-                  <div className="vs-num vs-num-r" style={{ color: bWin ? '#f4d84b' : '#8aa0bd' }}>{bv}</div>
+                  <div className="vs-num vs-num-r" style={{ color: bWin ? 'var(--gold)' : 'var(--muted)' }}>{bv}</div>
                   <div className="vs-bar" style={{ width: (on ? (bv / 5) * 100 : 0) + '%', background: bWin ? b.accent : b.accent + '66', boxShadow: bWin ? '0 0 8px ' + b.accent + '88' : 'none', transitionDelay: delay }} />
                 </div>
               </div>

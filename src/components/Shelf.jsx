@@ -4,7 +4,7 @@ import Cover from './Cover.jsx';
 import { showPlank } from './Toolbar.jsx';
 
 const PlatIcon = ({ k }) => {
-  const c = '#8aa0bd';
+  const c = 'currentColor';
   if (k === 'Xbox') return <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke={c} strokeWidth="1.6" /><path d="M8 7 Q12 12 16 17 M16 7 Q12 12 8 17" fill="none" stroke={c} strokeWidth="1.6" /></svg>;
   if (k === 'Switch') return <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="16" rx="3.2" fill="none" stroke={c} strokeWidth="1.6" /><rect x="13" y="4" width="7" height="16" rx="3.2" fill="none" stroke={c} strokeWidth="1.6" /><circle cx="7.5" cy="8.5" r="1.3" fill={c} /></svg>;
   if (k === 'SteamDeck') return <svg width="22" height="20" viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="2" width="24" height="16" rx="8" fill="none" stroke={c} strokeWidth="1.5" /><circle cx="7" cy="10" r="3.2" fill="none" stroke={c} strokeWidth="1.5" /><circle cx="19" cy="10" r="3.2" fill="none" stroke={c} strokeWidth="1.5" /></svg>;

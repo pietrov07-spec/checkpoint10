@@ -37,6 +37,11 @@ export function gameIdFromPath(pathname) {
 
 const emptyDraft = () => ({ title: '', platform: 'PlayStation', relYear: 2024, scores: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3], baseColor: '#34a6bd', cover: null, origAccent: null, origPairs: null, facts: null, links: null });
 
+function initialTheme() {
+  try { const saved = localStorage.getItem('checkpoint10_theme'); if (THEMES[saved]) return saved; } catch { /* sin storage */ }
+  return null;
+}
+
 function initialLang() {
   try { const saved = localStorage.getItem('checkpoint10_lang'); if (saved === 'es' || saved === 'en') return saved; } catch { /* sin storage */ }
   return 'es';
@@ -50,7 +55,7 @@ export default class App extends Component {
     groupBy: 'platform', lang: initialLang(),
     query: '', platFilter: null, minScore: 0,
     compareMode: false, compareIds: [], versusOpen: false, versusBars: false,
-    theme: null,
+    theme: initialTheme(),
     dragId: null, ghost: null,
     openId: null, barsOn: false, fichaClosing: false, copiedShare: false,
     view: 'shelf', spineMode: false, statsOpen: false, optionsOpen: false,
@@ -112,6 +117,9 @@ export default class App extends Component {
     if (prev.lang !== this.state.lang) {
       document.documentElement.lang = this.state.lang;
       try { localStorage.setItem('checkpoint10_lang', this.state.lang); } catch { /* sin storage */ }
+    }
+    if (prev.theme !== this.state.theme && this.state.theme) {
+      try { localStorage.setItem('checkpoint10_theme', this.state.theme); } catch { /* sin storage */ }
     }
   }
 
@@ -569,7 +577,7 @@ export default class App extends Component {
     const theme = THEMES[this.themeKey];
     const noResults = s.loaded && this.shownGames.length === 0 && !s.compareMode;
     return (
-      <div className="root" style={{ background: theme.root, color: theme.text }}>
+      <div className={"root theme-" + this.themeKey} style={{ background: theme.root, color: theme.text }}>
         <div className="grid-bg" style={{ backgroundImage: `linear-gradient(${theme.grid} 1px,transparent 1px),linear-gradient(90deg,${theme.grid} 1px,transparent 1px)` }} />
         <div className="vignette" />
 

@@ -46,4 +46,15 @@ export const THEMES = {
     plankShadow: '0 0 20px rgba(80,220,255,.4),0 6px 14px rgba(0,0,0,.65),inset 0 2px 0 rgba(220,252,255,.7),inset 0 -3px 8px rgba(0,40,60,.5)',
     plankTop: '1px solid rgba(200,250,255,.75)', lip: 'linear-gradient(180deg,rgba(80,220,255,.22),transparent)',
   },
+  // Tema claro: los textos y paneles se adaptan con las reglas .theme-marfil de styles.css.
+  marfil: {
+    labelKey: 'themeMarfil', text: '#1d2230',
+    root: 'radial-gradient(70% 50% at 90% -10%, rgba(255,190,150,.35), transparent 60%), radial-gradient(60% 50% at 0% 0%, rgba(170,200,255,.35), transparent 60%), linear-gradient(180deg, #fbf8f2 0%, #f3eee5 60%, #ebe4d8 100%)',
+    grid: 'rgba(40,30,20,.04)',
+    niche: 'linear-gradient(180deg, rgba(120,100,80,.10), rgba(255,255,255,.3))',
+    nicheBorder: 'rgba(80,60,40,.08)', nicheShadow: 'inset 0 22px 26px -24px rgba(80,60,40,.35)',
+    plank: 'repeating-linear-gradient(90deg, rgba(0,0,0,.03) 0 3px, transparent 3px 9px), linear-gradient(180deg, #e2c9a2 0%, #cfae7e 50%, #b58f5f 100%)',
+    plankShadow: '0 8px 14px rgba(90,60,30,.25), inset 0 2px 0 rgba(255,255,255,.6)',
+    plankTop: '1px solid rgba(255,255,255,.7)', lip: 'linear-gradient(180deg, rgba(90,60,30,.15), transparent)',
+  },
 };

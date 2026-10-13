@@ -54,7 +54,7 @@ function ThemeGroup({ app }) {
   return (
     <div className="seg-group seg-group-gap8">
       <span className="seg-label">{t('theme')}</span>
-      {['wood', 'neon'].map((k) => (
+      {Object.keys(THEMES).map((k) => (
         <button key={k} type="button" className={'theme-tab' + on(k === app.themeKey)} onClick={() => app.setTheme(k)}>{t(THEMES[k].labelKey)}</button>
       ))}
     </div>

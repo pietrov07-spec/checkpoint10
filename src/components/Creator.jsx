@@ -90,7 +90,7 @@ export default function Creator({ app }) {
             <div className="creator-avg">
               <span className="eyebrow">{t('avgWord')}</span>
               <span className="creator-avg-num" style={{ color: draft.baseColor }}>{avg}</span>
-              <span style={{ fontSize: 11, color: '#7f95b0' }}>/5</span>
+              <span style={{ fontSize: 11, color: 'var(--muted2)' }}>/5</span>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ export default function Creator({ app }) {
                     const active = draft.platform === p.key;
                     return (
                       <button key={p.key} type="button" className="plat-opt" aria-pressed={active} onClick={() => app.setDraft({ platform: p.key })}
-                        style={{ border: '1px solid ' + (active ? draft.baseColor : 'rgba(255,255,255,.12)'), background: active ? draft.baseColor : 'rgba(255,255,255,.03)', color: active ? '#0d1a2b' : '#b9c7d8' }}>
+                        style={{ border: '1px solid ' + (active ? draft.baseColor : 'rgba(255,255,255,.12)'), background: active ? draft.baseColor : 'rgba(255,255,255,.03)', color: active ? '#0d1a2b' : 'var(--sub)' }}>
                         {p.label}
                       </button>
                     );

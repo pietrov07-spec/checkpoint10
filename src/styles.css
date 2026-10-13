@@ -18,6 +18,7 @@ h1, h2 { margin: 0; font-weight: inherit; }
 }
 
 /* ---------- base ---------- */
+.root { --gold: #f4d84b; --gold-dim: #c9b34e; --rose: #e8908a; --muted: #8aa0bd; --sub: #b9c7d8; --muted2: #7f95b0; }
 .root { min-height: 100vh; font-family: 'Chakra Petch', sans-serif; padding: 26px 30px 90px; position: relative; overflow: hidden; transition: background .4s ease, color .4s ease; }
 .grid-bg { position: absolute; inset: 0; pointer-events: none; background-size: 46px 46px;
   mask-image: radial-gradient(100% 80% at 50% 0%, #000 55%, transparent 100%); -webkit-mask-image: radial-gradient(100% 80% at 50% 0%, #000 55%, transparent 100%); }
@@ -137,6 +138,7 @@ h1, h2 { margin: 0; font-weight: inherit; }
 .shelf { margin-bottom: 14px; }
 .shelf-head { display: flex; align-items: center; gap: 11px; margin-bottom: 8px; padding-left: 2px; }
 .year-dot { width: 9px; height: 9px; background: #f4d84b; display: inline-block; }
+.shelf-head svg { color: #8aa0bd; }
 .shelf-label { font-family: 'Chakra Petch', sans-serif; font-weight: 700; letter-spacing: 3px; font-size: 14px; color: #cdd9e6; }
 .shelf-count { font-size: 11px; color: #5f748f; letter-spacing: 1px; }
 .shelf-rule { flex: 1; height: 1px; background: linear-gradient(90deg,rgba(255,255,255,.09),transparent); }
@@ -419,3 +421,145 @@ h1, h2 { margin: 0; font-weight: inherit; }
   .ficha-share .vrule { display: none; }
   .share-row { gap: 7px; }
 }
+
+/* ======================================================================
+   Tema MARFIL (claro). Mismo diseño, con textos oscuros y paneles claros.
+   ====================================================================== */
+.theme-marfil { --gold: #9a6b00; --gold-dim: #8a6a1a; --rose: #b8433a; --muted: #6f6a62; --sub: #4a4f5c; --muted2: #7a746a; --ink: #1d2230; }
+.theme-marfil .vignette { display: none; }
+.theme-marfil ::selection { background: #1d2230; color: #fbf8f2; }
+
+/* encabezado */
+.theme-marfil .brand-name { color: var(--ink); }
+.theme-marfil .brand-tagline { color: #6f6a62; }
+.theme-marfil .brand svg circle:first-child { fill: #e8b93a; }
+.theme-marfil .brand svg circle:last-child { fill: #f6f2ea; }
+
+/* botones y grupos */
+.theme-marfil .lang-switch { border-color: rgba(30,30,40,.14); }
+.theme-marfil .lang-btn { background: #fff; color: #6f6a62; }
+.theme-marfil .btn-outline, .theme-marfil .btn-compare, .theme-marfil .btn-theme, .theme-marfil .btn-clear,
+.theme-marfil .btn-soft, .theme-marfil .btn-tool, .theme-marfil .modal-x, .theme-marfil .round-btn,
+.theme-marfil .share-btn, .theme-marfil .m-options-btn {
+  background: #fff; border-color: rgba(30,30,40,.14); color: #2c3242; box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.theme-marfil .btn-outline:hover, .theme-marfil .btn-tool:hover, .theme-marfil .share-btn:hover { color: var(--ink); border-color: rgba(30,30,40,.4); }
+.theme-marfil .seg-group, .theme-marfil .min-score, .theme-marfil .m-options { background: rgba(255,255,255,.7); border-color: rgba(30,30,40,.08); box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.theme-marfil .seg, .theme-marfil .tab, .theme-marfil .theme-tab, .theme-marfil .chip { color: #6f6a62; }
+.theme-marfil .lang-btn.is-active, .theme-marfil .seg.is-active, .theme-marfil .tab.is-active, .theme-marfil .theme-tab.is-active,
+.theme-marfil .chip.is-active, .theme-marfil .btn-compare.is-active, .theme-marfil .m-options-btn.is-active {
+  background: var(--ink); border-color: var(--ink); color: #fbf8f2;
+}
+.theme-marfil .seg-label { color: #8a8478; }
+.theme-marfil .count-line { color: #8a8478; }
+.theme-marfil .count-line b { color: var(--ink); }
+.theme-marfil .search-input { background: #fff; border-color: rgba(30,30,40,.12); color: var(--ink); }
+.theme-marfil .search-icon { color: #8a8478; }
+.theme-marfil .search-clear { background: rgba(0,0,0,.06); color: #4a4f5c; }
+.theme-marfil .min-score-val { color: var(--gold); }
+.theme-marfil .compare-bar { background: rgba(232,185,58,.12); border-color: rgba(160,110,0,.3); }
+.theme-marfil .compare-title { color: var(--gold-dim); }
+.theme-marfil .compare-hint { color: #4a4f5c; }
+.theme-marfil .compare-slot { background: rgba(0,0,0,.04); border-color: rgba(0,0,0,.2); }
+.theme-marfil .compare-slot.is-filled { border-color: #e8b93a; }
+.theme-marfil .compare-n { color: #8a8478; }
+.theme-marfil .btn-versus.is-disabled { background: #d8d2c6; }
+.theme-marfil .no-results, .theme-marfil .empty-note { color: #6f6a62; }
+.theme-marfil .eyebrow { color: #7a746a; }
+
+/* estadísticas */
+.theme-marfil .stats { background: rgba(255,255,255,.65); border-color: rgba(30,30,40,.08); }
+.theme-marfil .stats-heading { color: var(--ink); }
+.theme-marfil .stat-label, .theme-marfil .plat-label { color: #4a4f5c; }
+.theme-marfil .stat-track { background: rgba(0,0,0,.06); }
+.theme-marfil .stat-bar { background: rgba(80,90,110,.35); }
+.theme-marfil .stat-bar.hi { background: #e8b93a; box-shadow: none; }
+.theme-marfil .stat-bar.lo { background: rgba(184,67,58,.45); }
+.theme-marfil .stat-num { color: #4a4f5c; }
+.theme-marfil .stat-num.hi { color: var(--gold); }
+.theme-marfil .stat-num.lo { color: var(--rose); }
+.theme-marfil .stile { background: #fff; border-color: rgba(30,30,40,.08); }
+.theme-marfil .stile-gold { background: rgba(232,185,58,.12); border-color: rgba(160,110,0,.25); }
+.theme-marfil .stile-eyebrow { color: #7a746a; }
+.theme-marfil .stile-big, .theme-marfil .best-avg { color: var(--gold); }
+.theme-marfil .stile-mid, .theme-marfil .best-title { color: var(--ink); }
+.theme-marfil .plat-bar { background: #9aa3b2; }
+.theme-marfil .plat-count { color: #6f6a62; }
+
+/* estante */
+.theme-marfil .shelf-head svg { color: #6f6a62; }
+.theme-marfil .shelf-label { color: #2c3242; }
+.theme-marfil .shelf-count { color: #8a8478; }
+.theme-marfil .shelf-rule { background: linear-gradient(90deg, rgba(30,30,40,.18), transparent); }
+.theme-marfil .tile-face { border-color: rgba(0,0,0,.08); box-shadow: 0 12px 20px rgba(60,40,20,.25); }
+.theme-marfil .tile-shadow { background: radial-gradient(ellipse at center, rgba(60,40,20,.3), rgba(0,0,0,0) 72%); }
+.theme-marfil .tile-placeholder { border-color: rgba(60,40,20,.3); background: rgba(0,0,0,.03); }
+
+/* cajón móvil */
+.theme-marfil .crate-fade { background: linear-gradient(180deg, rgba(243,238,229,0), rgba(235,228,216,.9)); }
+.theme-marfil .crate-title { color: var(--ink); }
+.theme-marfil .crate-plat-name, .theme-marfil .crate-legend > span { color: #4a4f5c; }
+.theme-marfil .crate-avg { color: var(--gold); }
+.theme-marfil .crate-pos { color: #6f6a62; }
+.theme-marfil .crate-hint { color: #7a746a; }
+
+/* línea de tiempo */
+.theme-marfil .timeline-row { background: #fff; border-color: rgba(30,30,40,.08); }
+.theme-marfil .timeline-row:hover { background: #fffdf8; border-color: rgba(160,110,0,.35); }
+.theme-marfil .timeline-title { color: var(--ink); }
+.theme-marfil .timeline-meta { color: #6f6a62; }
+.theme-marfil .timeline-avg, .theme-marfil .timeline-year { color: var(--gold); }
+.theme-marfil .timeline-dot { border-color: #f3eee5; }
+
+/* torneo */
+.theme-marfil .tour-setup-title, .theme-marfil .podium-title-champ { color: var(--ink); }
+.theme-marfil .tour-setup-body, .theme-marfil .tour-mode-desc, .theme-marfil .duel-hint { color: #4a4f5c; }
+.theme-marfil .tour-mode { background: #fff; border-color: rgba(30,30,40,.1); }
+.theme-marfil .tour-mode:hover { border-color: #e8b93a; background: #fffbef; }
+.theme-marfil .tour-mode-title, .theme-marfil .duel-label, .theme-marfil .podium-champ-name { color: var(--gold); }
+.theme-marfil .duel-progress, .theme-marfil .podium-eyebrow { color: #7a746a; }
+.theme-marfil .duel-vs { color: #6f6a62; }
+.theme-marfil .podium-title { color: #2c3242; }
+.theme-marfil .share-box { background: #fff; border-color: rgba(30,30,40,.08); }
+.theme-marfil .input-dark { background: #faf7f1; border-color: rgba(30,30,40,.14); color: var(--ink); }
+
+/* modales */
+.theme-marfil .backdrop { background: rgba(40,30,20,.45); }
+.theme-marfil .modal, .theme-marfil .modal-creator { background: linear-gradient(180deg, #fffdf9, #f5f0e7); border-color: rgba(30,30,40,.1); color: var(--ink); }
+.theme-marfil .card-preview { background: #f5f0e7; border-color: rgba(30,30,40,.1); }
+.theme-marfil .card-busy { color: #6f6a62; }
+.theme-marfil .ficha-title, .theme-marfil .vs-title, .theme-marfil .creator-title, .theme-marfil .pending-title { color: var(--ink); }
+.theme-marfil .ficha-meta, .theme-marfil .vs-meta, .theme-marfil .ficha-avg-label, .theme-marfil .vs-avg-label { color: #6f6a62; }
+.theme-marfil .ficha-cover, .theme-marfil .vs-thumb { border-color: rgba(0,0,0,.08); box-shadow: 0 12px 24px rgba(60,40,20,.25); }
+.theme-marfil .pending { border-color: rgba(30,30,40,.2); }
+.theme-marfil .pending-body { color: #4a4f5c; }
+.theme-marfil .bar-label, .theme-marfil .rate-label, .theme-marfil .vs-label { color: #4a4f5c; }
+.theme-marfil .seg-off, .theme-marfil .cell-off { background: transparent; border: 1px dashed rgba(0,0,0,.2); }
+/* Algunos colores de barra son muy claros (p. ej. Hidden Folks): borde fino y números más oscuros. */
+.theme-marfil .seg-on, .theme-marfil .cell-on { box-shadow: inset 0 0 0 1px rgba(0,0,0,.22); }
+.theme-marfil .bar-num, .theme-marfil .rate-num, .theme-marfil .ficha-avg, .theme-marfil .vs-avg,
+.theme-marfil .fact-eyebrow, .theme-marfil .creator-avg-num { filter: brightness(.68) saturate(1.3); }
+.theme-marfil .ficha-section, .theme-marfil .ficha-share { border-top-color: rgba(0,0,0,.08); }
+.theme-marfil .fact, .theme-marfil .links-box, .theme-marfil .creator-avg { background: #fff; border-color: rgba(30,30,40,.08); }
+.theme-marfil .fact-value { color: #2c3242; }
+.theme-marfil .trivia { background: rgba(232,185,58,.1); border-color: rgba(160,110,0,.25); }
+.theme-marfil .trivia-title { color: var(--gold-dim); }
+.theme-marfil .trivia-item { color: #2c3242; }
+.theme-marfil .trivia-mark { color: var(--gold); }
+.theme-marfil .link-chip { background: #faf7f1; border-color: rgba(30,30,40,.14); color: #2c3242; }
+.theme-marfil .link-chip:hover { border-color: var(--gold); color: var(--gold); }
+.theme-marfil .link-official { border-color: rgba(160,110,0,.5); color: var(--gold-dim); }
+.theme-marfil .link-search { color: #4a4f5c; }
+.theme-marfil .cover-credit { color: #8a8478; }
+.theme-marfil .vrule { background: rgba(0,0,0,.1); }
+.theme-marfil .vs-crown, .theme-marfil .vs-word { color: var(--gold); }
+.theme-marfil .creator-head, .theme-marfil .creator-foot { border-color: rgba(0,0,0,.08); }
+.theme-marfil .field-label { color: #7a746a; }
+.theme-marfil .input-field { background: #fff; border-color: rgba(30,30,40,.14); color: var(--ink); }
+.theme-marfil .swatch { box-shadow: 0 0 0 1px rgba(0,0,0,.2); }
+.theme-marfil .rawg { background: rgba(232,185,58,.08); border-color: rgba(160,110,0,.3); }
+.theme-marfil .rawg-item { background: #fff; color: var(--ink); }
+
+/* pie */
+.theme-marfil .footer { color: #8a8478; border-top-color: rgba(0,0,0,.08); }
+.theme-marfil .swatch[aria-pressed="true"] { border-color: var(--ink) !important; }
