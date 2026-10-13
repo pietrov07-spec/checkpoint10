@@ -1,6 +1,10 @@
+import VERSIONS from '../data/covers.json';
+
 // Ruta pública de una portada de la colección base (generadas por `npm run covers`).
+// El parámetro ?v= cambia cuando cambia la imagen, para que la caché no muestre la versión vieja.
 const BASE = import.meta.env.BASE_URL;
-export const coverUrl = (path, size = 600) => `${BASE}${path}-${size}.webp`;
+const version = (path) => VERSIONS[path.replace(/^covers\//, '')] || '';
+export const coverUrl = (path, size = 600) => `${BASE}${path}-${size}.webp${version(path) ? '?v=' + version(path) : ''}`;
 export const coverSrcSet = (path) => `${coverUrl(path, 300)} 300w, ${coverUrl(path, 600)} 600w`;
 
 /** URL utilizable de la portada de un juego (archivo base, data URL subida o URL remota). */

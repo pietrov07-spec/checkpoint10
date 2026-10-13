@@ -10,6 +10,7 @@ const SITE = (env.VITE_SITE_URL || '').replace(/\/$/, '');
 if (!SITE) console.warn('⚠ Define VITE_SITE_URL en .env (p. ej. https://checkpoint10.vercel.app): las redes necesitan URLs absolutas en og:image.');
 
 const games = JSON.parse(await readFile('src/data/games.json', 'utf8'));
+const versions = JSON.parse(await readFile('src/data/covers.json', 'utf8'));
 const es = JSON.parse(await readFile('src/i18n/es.json', 'utf8'));
 const html = await readFile('dist/index.html', 'utf8');
 
@@ -29,7 +30,7 @@ for (const g of games) {
     <meta property="og:title" content="${esc(title)}" />
     <meta property="og:description" content="${esc(desc)}" />
     <meta property="og:url" content="${esc(url)}" />
-    <meta property="og:image" content="${esc(abs(`/covers/${g.id}-og.jpg`))}" />
+    <meta property="og:image" content="${esc(abs(`/covers/${g.id}-og.jpg?v=${versions[g.id] || ''}`))}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />

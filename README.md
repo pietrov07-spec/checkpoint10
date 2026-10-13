@@ -48,7 +48,7 @@ tests/                  pruebas con Vitest
 ### Agregar o editar un juego "de fábrica"
 
 1. Agrega su entrada en `src/data/games.json` (copia una existente).
-2. Pon su portada como `assets/covers-src/<id>.jpg` y corre `npm run covers`.
+2. Pon su portada como `assets/covers-src/<id>.jpg` (ideal 1080×1350) y corre `npm run covers`. Esto también actualiza `src/data/covers.json`, la huella que obliga a los navegadores a descargar la portada nueva en vez de usar la que tenían guardada.
 3. Agrega sus enlaces en `src/data/links.json`.
 4. `npm test` revisa que no falte nada.
 
