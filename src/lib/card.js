@@ -87,6 +87,6 @@ function paint(og, avg, cover, { brand, platName, labels, t }) {
     ctx.fillStyle = color; ctx.font = "800 26px 'Archivo Black'"; ctx.textAlign = 'left'; ctx.fillText(String(score), numX, cy);
   }
   ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-  ctx.fillStyle = '#5f748f'; ctx.font = "700 20px 'Chakra Petch'"; ctx.fillText('_@paquer  ·  checkpoint10', 70, H - 40);
+  ctx.fillStyle = '#5f748f'; ctx.font = "700 20px 'Chakra Petch'"; ctx.fillText('@_paquer  ·  checkpoint10', 70, H - 40);
   return cv.toDataURL('image/png');
 }

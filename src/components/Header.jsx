@@ -28,9 +28,9 @@ export default function Header({ app }) {
             <span className="label-long">{t('neww')}</span><span className="label-short">{t('newShort')}</span>
           </button>
         )}
-        <div className="handle handle-desktop">_@PAQUER</div>
+        <div className="handle handle-desktop">@_PAQUER</div>
       </div>
-      <div className="handle handle-mobile" aria-hidden="true">_@PAQUER</div>
+      <div className="handle handle-mobile" aria-hidden="true">@_PAQUER</div>
     </header>
   );
 }
