@@ -21,11 +21,11 @@ describe('torneo', () => {
     expect(T.seedBracket(mk(1))).toBeNull();
   });
 
-  it('con la colección real (23 juegos) siembra 32 lugares y da pases directos', () => {
+  it('con la colección real siembra 32 lugares y da pases directos', () => {
     const s = T.seedBracket(games);
     expect(s.rounds[0]).toHaveLength(16);
     const byes = s.rounds[0].filter((m) => !(m.a && m.b));
-    expect(byes).toHaveLength(9); // 32 − 23
+    expect(byes).toHaveLength(32 - games.length);
     byes.forEach((m) => expect(m.w).toBeTruthy());
   });
 
@@ -42,7 +42,7 @@ describe('torneo', () => {
     expect(new Set([p.champ.id, p.runner.id, p.third.id]).size).toBe(3);
     const { total, played } = T.progress(s);
     expect(played).toBe(total);
-    expect(total).toBe(23 - 1 + 1); // n−1 eliminaciones + duelo por el 3er lugar
+    expect(total).toBe(games.length); // n−1 eliminaciones + duelo por el 3er lugar
   });
 
   it.each([2, 3, 5, 9, 16, 17, 32, 40])('no se atora con %i juegos (antes se trababa con menos de 16)', (n) => {

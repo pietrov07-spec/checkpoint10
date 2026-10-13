@@ -941,5 +941,46 @@
     ],
     "rot": null,
     "cover": "covers/journey"
+  },
+  {
+    "id": "firewatch",
+    "title": "Firewatch",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2016,
+    "accent": "#f0873a",
+    "facts": {
+      "studio": "Campo Santo (San Francisco) — ed. Panic",
+      "director": "Dir. Sean Vanaman y Olly Moss · Arte: Olly Moss y Jane Ng · Música: Chris Remo",
+      "awards": "BAFTA 2017: Mejor Debut y Mejor Interpretación (Cissy Jones) · Game Developers Choice Awards 2017: Mejor Debut y Mejor Narrativa",
+      "score": "Metacritic 81 (PC) · 87 (Switch)",
+      "site": "https://www.firewatchgame.com/",
+      "trivia": [
+        "Ambientado en el bosque nacional Shoshone, Wyoming, en 1989: Henry pasa el verano como vigía de incendios y su único contacto es Delilah, a través de un walkie-talkie.",
+        "Todo su mundo partió de una sola pintura de Olly Moss, que la artista Jane Ng convirtió en un entorno 3D.",
+        "Cissy Jones (Delilah) ganó un BAFTA por su actuación, grabada a distancia por Skype junto a Rich Sommer (Henry). En 2018 Valve compró el estudio Campo Santo."
+      ]
+    },
+    "scores": [
+      4,
+      3,
+      4,
+      4,
+      3,
+      3,
+      4,
+      3,
+      1,
+      4
+    ],
+    "pairs": [
+      "#f0873a",
+      "#f7c8a0",
+      "#d9452f",
+      "#b0364a",
+      "#f2a65a"
+    ],
+    "rot": "2deg",
+    "cover": "covers/firewatch"
   }
 ]
