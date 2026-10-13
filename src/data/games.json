@@ -1,0 +1,945 @@
+[
+  {
+    "id": "guacamelee",
+    "title": "Guacamelee 2",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2018,
+    "accent": "#57b947",
+    "facts": {
+      "studio": "DrinkBox Studios (Toronto, Canadá)",
+      "director": "Serie creada por Augusto Quijano · Música: Rom Di Prisco, Peter Chapman",
+      "awards": "—",
+      "score": "Metacritic 84 (PC) · 87 (Switch)",
+      "site": "https://store.steampowered.com/app/534550/Guacamelee_2/",
+      "trivia": [
+        "Es un Metroidvania de lucha ambientado en el \"Mexiverso\", con folclore y lucha libre mexicana.",
+        "Incluye cooperativo local para hasta 4 jugadores.",
+        "Su gancho de humor: la campaña promete \"300% más pollos\" que la primera entrega."
+      ]
+    },
+    "scores": [
+      3,
+      4,
+      5,
+      4,
+      4,
+      4,
+      3,
+      4,
+      2,
+      2
+    ],
+    "pairs": [
+      "#57b947",
+      "#a03f26",
+      "#2a5cae",
+      "#f28f1c",
+      "#c46cb0"
+    ],
+    "rot": "-2deg",
+    "cover": "covers/guacamelee"
+  },
+  {
+    "id": "lana",
+    "title": "Planet of Lana",
+    "platform": "Xbox",
+    "year": 2024,
+    "relYear": 2023,
+    "accent": "#34a6bd",
+    "facts": {
+      "studio": "Wishfully (ed. Thunderful Publishing) — juego debut del estudio",
+      "director": "Dir. Adam Stjärnljus y Klas Martin Eriksson · Música: Takeshi Furukawa",
+      "awards": "Nominado a Games for Impact — The Game Awards 2023",
+      "score": "Metacritic 80 · OpenCritic 81",
+      "site": "https://store.steampowered.com/app/1608230/Planet_of_Lana/",
+      "trivia": [
+        "El juego nació de un dibujo que el director Adam Stjärnljus hizo en 2017: una niña frente a una criatura-robot, que terminó siendo el arte clave.",
+        "El compositor Takeshi Furukawa (The Last Guardian) se ofreció a musicalizarlo tras ver su arte.",
+        "El equipo creó un idioma ficticio para narrar la historia sin diálogos comprensibles."
+      ]
+    },
+    "scores": [
+      3,
+      4,
+      5,
+      4,
+      4,
+      5,
+      1,
+      3,
+      1,
+      5
+    ],
+    "pairs": [
+      "#34a6bd",
+      "#b4d7a5",
+      "#6aa78d",
+      "#8ed7d7",
+      "#2f4fb0"
+    ],
+    "rot": "2deg",
+    "cover": "covers/lana"
+  },
+  {
+    "id": "florence",
+    "title": "Florence",
+    "platform": "Switch",
+    "year": 2024,
+    "relYear": 2018,
+    "accent": "#ece11a",
+    "facts": {
+      "studio": "Mountains (Melbourne) — ed. Annapurna Interactive",
+      "director": "Dir. Ken Wong (diseñador de Monument Valley) · Música: Kevin Penkin",
+      "awards": "Apple Design Award 2018",
+      "score": "Metacritic 78 (Switch)",
+      "site": "https://store.steampowered.com/app/1102130/Florence/",
+      "trivia": [
+        "Ken Wong armó el estudio Mountains ANTES de decidir qué juego harían; luego eligieron explorar el amor y las emociones, poco tratados en videojuegos.",
+        "Es una experiencia breve (~30 min) contada en unas 20 viñetas con minijuegos.",
+        "Fue el primer juego de Wong tras diseñar Monument Valley."
+      ]
+    },
+    "scores": [
+      3,
+      3,
+      4,
+      2,
+      4,
+      3,
+      1,
+      1,
+      1,
+      3
+    ],
+    "pairs": [
+      "#5b6b8c",
+      "#f8d3af",
+      "#9a8592",
+      "#ece11a",
+      "#dcdcdc"
+    ],
+    "rot": "-1deg",
+    "cover": "covers/florence"
+  },
+  {
+    "id": "mafia",
+    "title": "Mafia: Definitive Edition",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2020,
+    "accent": "#f4b52a",
+    "facts": {
+      "studio": "Hangar 13 — ed. 2K",
+      "director": "Dir. Alex Cox · Guion: Haden Blackman, Will Porter · Música: Jesse Harlin",
+      "awards": "—",
+      "score": "Metacritic 79 (PC) · OpenCritic 78",
+      "site": "https://store.steampowered.com/app/1030840/Mafia_Definitive_Edition/",
+      "trivia": [
+        "Es un remake desde cero del Mafia original de 2002 de Illusion Softworks; es la cuarta entrega de la serie.",
+        "Regrabó por completo el reparto de voces y amplió la historia respetando el guion clásico.",
+        "Ambientado en la ciudad ficticia de Lost Heaven en los años 30."
+      ]
+    },
+    "scores": [
+      4,
+      4,
+      3,
+      3,
+      3,
+      3,
+      1,
+      2,
+      1,
+      2
+    ],
+    "pairs": [
+      "#f4b52a",
+      "#efe6a0",
+      "#3f6d8e",
+      "#ef8719",
+      "#fbe6bf"
+    ],
+    "rot": "2.5deg",
+    "cover": "covers/mafia"
+  },
+  {
+    "id": "awayout",
+    "title": "A Way Out",
+    "platform": "Xbox",
+    "year": 2024,
+    "relYear": 2018,
+    "accent": "#b18377",
+    "facts": {
+      "studio": "Hazelight Studios (Estocolmo) — ed. Electronic Arts (EA Originals)",
+      "director": "Dir. y guion: Josef Fares",
+      "awards": "Nominado a Mejor Juego Multijugador — The Game Awards 2018",
+      "score": "Metacritic 79",
+      "site": "https://store.steampowered.com/app/1222700/A_Way_Out/",
+      "trivia": [
+        "Es un juego cooperativo OBLIGATORIO para dos jugadores, en pantalla dividida constante.",
+        "EA aportó unos 3.7 millones de dólares y dejó a Fares control creativo total; las ganancias fueron para Hazelight.",
+        "Es el segundo juego de Josef Fares tras Brothers: A Tale of Two Sons; vendió más de 1 millón de copias en dos semanas."
+      ]
+    },
+    "scores": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      3,
+      1,
+      2,
+      1,
+      3
+    ],
+    "pairs": [
+      "#7d8285",
+      "#b18377",
+      "#8f8b7e",
+      "#3c4145",
+      "#e2ddd3"
+    ],
+    "rot": "-2.5deg",
+    "cover": "covers/awayout"
+  },
+  {
+    "id": "plucky",
+    "title": "The Plucky Squire",
+    "platform": "Switch",
+    "year": 2024,
+    "relYear": 2024,
+    "accent": "#e8397f",
+    "facts": {
+      "studio": "All Possible Futures (Reino Unido) — ed. Devolver Digital",
+      "director": "Dir. James Turner y Jonathan Biddle · Música: Mike Georgiades",
+      "awards": "Nominado a Mejor Debut Independiente — The Game Awards 2024",
+      "score": "Metacritic 83 · OpenCritic 85",
+      "site": "https://store.steampowered.com/app/1627570/The_Plucky_Squire/",
+      "trivia": [
+        "El cofundador James Turner trabajó en Game Freak y fue director de arte de Pokémon Espada y Escudo.",
+        "El juego alterna entre un mundo 2D dibujado a mano (dentro de un libro) y un mundo 3D fuera de sus páginas.",
+        "Jot, el héroe, es expulsado de su propio libro por el villano Humgrump, que descubre que está destinado a perder."
+      ]
+    },
+    "scores": [
+      2,
+      4,
+      5,
+      3,
+      2,
+      2,
+      1,
+      1,
+      1,
+      3
+    ],
+    "pairs": [
+      "#e8397f",
+      "#6cc0c0",
+      "#f2e733",
+      "#c98d72",
+      "#7d2f47"
+    ],
+    "rot": "1.5deg",
+    "cover": "covers/plucky"
+  },
+  {
+    "id": "rdr",
+    "title": "Red Dead Redemption II",
+    "platform": "PlayStation",
+    "year": 2024,
+    "relYear": 2018,
+    "accent": "#1f8ba8",
+    "facts": {
+      "studio": "Rockstar Studios / Rockstar Games",
+      "director": "Dir. Rob Nelson · Guion: Dan Houser, Michael Unsworth",
+      "awards": "The Game Awards 2018: Mejor Audio, Narrativa, Banda Sonora y Actuación (Roger Clark)",
+      "score": "Metacritic 97 · IGN 10/10",
+      "site": "https://www.rockstargames.com/reddeadredemption2",
+      "trivia": [
+        "Cuenta con más de 500,000 líneas de diálogo grabadas.",
+        "La banda sonora original supera las 60 horas de música.",
+        "Su desarrollo tomó cerca de 8 años y participaron más de 1,000 actores de captura de movimiento."
+      ]
+    },
+    "scores": [
+      5,
+      5,
+      5,
+      5,
+      4,
+      5,
+      5,
+      3,
+      5,
+      5
+    ],
+    "pairs": [
+      "#1f8ba8",
+      "#1f8ba8",
+      "#1f8ba8",
+      "#1f8ba8",
+      "#1f8ba8"
+    ],
+    "rot": "-1.5deg",
+    "cover": "covers/rdr"
+  },
+  {
+    "id": "control",
+    "title": "Control",
+    "platform": "PlayStation",
+    "year": 2024,
+    "relYear": 2019,
+    "accent": "#e01e1e",
+    "facts": {
+      "studio": "Remedy Entertainment (Espoo, Finlandia) — ed. 505 Games",
+      "director": "Dir. Mikael Kasurinen · Guion: Sam Lake",
+      "awards": "The Game Awards 2019: Mejor Dirección de Arte (8 nominaciones, incl. Juego del Año)",
+      "score": "Metacritic 82 · IGN 8/10",
+      "site": "https://store.steampowered.com/app/870780/CONTROL_Ultimate_Edition/",
+      "trivia": [
+        "La protagonista, Jesse Faden, se vuelve directora del Buró Federal de Control y lucha contra el Hiss, una fuerza sobrenatural.",
+        "Sam Lake (guionista) fue el rostro de Max Payne en el primer juego de la saga.",
+        "Su estética se inspira en el género literario \"new weird\"."
+      ]
+    },
+    "scores": [
+      4,
+      4,
+      3,
+      5,
+      4,
+      5,
+      2,
+      4,
+      3,
+      3
+    ],
+    "pairs": [
+      "#e01e1e",
+      "#5a1a22",
+      "#9a2a26",
+      "#e8352f",
+      "#3a1e2e"
+    ],
+    "rot": "2deg",
+    "cover": "covers/control"
+  },
+  {
+    "id": "astrobot",
+    "title": "Astro Bot",
+    "platform": "PlayStation",
+    "year": 2024,
+    "relYear": 2024,
+    "accent": "#3aa6ff",
+    "facts": {
+      "studio": "Team Asobi — ed. Sony Interactive Entertainment",
+      "director": "Dir. Nicolas Doucet · Música: Kenneth C. M. Young",
+      "awards": "The Game Awards 2024: Juego del Año, Mejor Dirección, Mejor Acción/Aventura y Mejor Juego Familiar",
+      "score": "Metacritic 94",
+      "site": "https://www.playstation.com/en-us/games/astro-bot/",
+      "trivia": [
+        "Se creó para celebrar el 30.º aniversario de PlayStation e incluye cientos de robots que homenajean sagas de la marca.",
+        "Nicolas Doucet, su director, es francés y dirige el estudio japonés Team Asobi.",
+        "Fue el juego mejor valorado de 2024 en Metacritic, empatado con Elden Ring: Shadow of the Erdtree y Metaphor: ReFantazio."
+      ]
+    },
+    "scores": [
+      3,
+      4,
+      5,
+      5,
+      5,
+      5,
+      2,
+      3,
+      3,
+      5
+    ],
+    "pairs": [
+      "#28306a",
+      "#4a90d0",
+      "#8ecae6",
+      "#8a8290",
+      "#e8e8e8"
+    ],
+    "rot": "-2deg",
+    "cover": "covers/astrobot"
+  },
+  {
+    "id": "silenthill2",
+    "title": "Silent Hill 2 Remake",
+    "platform": "PlayStation",
+    "year": 2024,
+    "relYear": 2024,
+    "accent": "#8a9a6a",
+    "facts": {
+      "studio": "Bloober Team — ed. Konami Digital Entertainment",
+      "director": "Dir. Mateusz Lenart · Producción: Motoi Okamoto (Konami) · Música: Akira Yamaoka",
+      "awards": "5 nominaciones en The Game Awards 2024 (Narrativa, Música, Audio, Actuación)",
+      "score": "Metacritic 86 · OpenCritic 88",
+      "site": "https://store.steampowered.com/app/2124490/SILENT_HILL_2/",
+      "trivia": [
+        "Es un remake del clásico de 2001; Akira Yamaoka (compositor) y Masahiro Ito (diseñador de criaturas) del original participaron activamente.",
+        "Vendió un millón de copias en sus primeros tres días.",
+        "Cambia la cámara fija clásica por una acción en tercera persona sobre el hombro."
+      ]
+    },
+    "scores": [
+      5,
+      4,
+      5,
+      5,
+      5,
+      4,
+      2,
+      3,
+      1,
+      5
+    ],
+    "pairs": [
+      "#6b7280",
+      "#a9b6bd",
+      "#8a9a80",
+      "#4a5568",
+      "#5a4a35"
+    ],
+    "rot": "1.5deg",
+    "cover": "covers/silenthill2"
+  },
+  {
+    "id": "blasphemous",
+    "title": "Blasphemous",
+    "platform": "Switch",
+    "year": 2024,
+    "relYear": 2019,
+    "accent": "#a94f96",
+    "facts": {
+      "studio": "The Game Kitchen (Sevilla, España) — ed. Team17",
+      "director": "Dir. Enrique Cabeza · Música: Carlos Viola",
+      "awards": "Universal Acclaim (Metacritic)",
+      "score": "Metacritic 82 (Xbox) · 78 (PS4)",
+      "site": "https://store.steampowered.com/app/774361/Blasphemous/",
+      "trivia": [
+        "Su mundo, Cvstodia, se inspira en la Semana Santa, los nazarenos y pinturas de Francisco de Goya.",
+        "Nació de una campaña de Kickstarter que alcanzó su meta de 50,000 USD en menos de 24 horas y recaudó 333,246 USD.",
+        "Es un Metroidvania de pixel-art con fuerte carga de horror religioso."
+      ]
+    },
+    "scores": [
+      4,
+      5,
+      5,
+      5,
+      4,
+      3,
+      1,
+      5,
+      3,
+      4
+    ],
+    "pairs": [
+      "#4d3f57",
+      "#5a1c2e",
+      "#a94f96",
+      "#6d7ca3",
+      "#b9bfd8"
+    ],
+    "rot": "-2.5deg",
+    "cover": "covers/blasphemous"
+  },
+  {
+    "id": "blasphemous2",
+    "title": "Blasphemous II",
+    "platform": "Switch",
+    "year": 2024,
+    "relYear": 2023,
+    "accent": "#e7dfa0",
+    "facts": {
+      "studio": "The Game Kitchen (Sevilla, España) — ed. Team17",
+      "director": "Dir. Enrique Cabeza y Francisco Ureña · Música: Carlos Viola",
+      "awards": "Universal Acclaim (Metacritic)",
+      "score": "Metacritic 85 (Xbox) · 84 (PS5)",
+      "site": "https://store.steampowered.com/app/2114740/Blasphemous_2/",
+      "trivia": [
+        "El equipo reconstruyó el código desde cero (18 meses) para acercarlo al Metroidvania clásico.",
+        "Se lanzó con doblaje completo en español de España e incluye al actor mexicano Humberto Vélez (voz de Homero Simpson).",
+        "Sigue inspirándose en el folclore andaluz, la historia y la arquitectura españolas."
+      ]
+    },
+    "scores": [
+      4,
+      5,
+      5,
+      5,
+      5,
+      4,
+      1,
+      5,
+      3,
+      4
+    ],
+    "pairs": [
+      "#eee9b8",
+      "#7a4a1c",
+      "#241810",
+      "#7a5a2e",
+      "#f5cd94"
+    ],
+    "rot": "2deg",
+    "cover": "covers/blasphemous2"
+  },
+  {
+    "id": "cocoon",
+    "title": "Cocoon",
+    "platform": "Xbox",
+    "year": 2024,
+    "relYear": 2023,
+    "accent": "#6a9d6e",
+    "facts": {
+      "studio": "Geometric Interactive — ed. Annapurna Interactive",
+      "director": "Dir. Jeppe Carlsen (diseñador de Limbo e Inside) · Música: Jakob Schmid",
+      "awards": "The Game Awards 2023: Mejor Debut Independiente · DICE: Mejor Juego Independiente",
+      "score": "Metacritic 88",
+      "site": "https://store.steampowered.com/app/1497440/COCOON/",
+      "trivia": [
+        "Su director, Jeppe Carlsen, fue diseñador de jugabilidad principal de Limbo e Inside; fundó Geometric Interactive para hacer Cocoon.",
+        "Controlas a un ser tipo escarabajo que carga mundos enteros dentro de orbes sobre su espalda.",
+        "Tardó unos cinco años de desarrollo con extensos playtests de partidas completas."
+      ]
+    },
+    "scores": [
+      3,
+      5,
+      4,
+      2,
+      4,
+      4,
+      1,
+      5,
+      1,
+      5
+    ],
+    "pairs": [
+      "#c9e0b8",
+      "#6a9d6e",
+      "#efb787",
+      "#e0603a",
+      "#cba372"
+    ],
+    "rot": "-1.5deg",
+    "cover": "covers/cocoon"
+  },
+  {
+    "id": "hiddenfolks",
+    "title": "Hidden Folks",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2017,
+    "accent": "#e8d84b",
+    "facts": {
+      "studio": "Adriaan de Jongh y Sylvain Tegroeg (Países Bajos)",
+      "director": "Diseño: Adriaan de Jongh · Arte: Sylvain Tegroeg · Música: Martin Kvale",
+      "awards": "Nominado a Mejor Juego Móvil — The Game Awards 2017",
+      "score": "Metacritic 78–82",
+      "site": "https://hiddenfolks.com/",
+      "trivia": [
+        "Todo el arte está dibujado a mano en papel, escaneado y montado por capas para formar las escenas.",
+        "Todos los efectos de sonido son ruidos hechos con la boca por los propios desarrolladores.",
+        "Surgió cuando de Jongh vio las ilustraciones de Tegroeg en su exposición de graduación en 2014."
+      ]
+    },
+    "scores": [
+      1,
+      3,
+      5,
+      3,
+      2,
+      4,
+      1,
+      4,
+      1,
+      4
+    ],
+    "pairs": [
+      "#f2f2f2",
+      "#8f8f8f",
+      "#3a3a3a",
+      "#dcdcdc",
+      "#9a9a9a"
+    ],
+    "rot": "2.5deg",
+    "cover": "covers/hiddenfolks"
+  },
+  {
+    "id": "hellblade2",
+    "title": "Hellblade: Senua’s Saga",
+    "platform": "Xbox",
+    "year": 2024,
+    "relYear": 2024,
+    "accent": "#c98a82",
+    "facts": {
+      "studio": "Ninja Theory — ed. Xbox Game Studios",
+      "director": "Dir. Dan Attwell, David García-Diaz y Mark Slater-Tunstill · Guion: Lara Derham, Tameem Antoniades",
+      "awards": "—",
+      "score": "Metacritic 81 · IGN",
+      "site": "https://store.steampowered.com/app/2461850/Senuas_Saga_Hellblade_II/",
+      "trivia": [
+        "Ambientado en la Islandia vikinga del siglo IX, con fuerte inspiración en la mitología nórdica.",
+        "Está construido en Unreal Engine 5 y Melina Juergens vuelve a interpretar a Senua.",
+        "Continúa el retrato del psicosis de Senua iniciado en Hellblade: Senua’s Sacrifice (2017)."
+      ]
+    },
+    "scores": [
+      4,
+      4,
+      5,
+      5,
+      4,
+      5,
+      1,
+      4,
+      1,
+      5
+    ],
+    "pairs": [
+      "#2a4a5f",
+      "#6a5560",
+      "#c98a82",
+      "#6a7a9a",
+      "#3a2015"
+    ],
+    "rot": null,
+    "cover": "covers/hellblade2"
+  },
+  {
+    "id": "naritaboy",
+    "title": "Narita Boy",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2021,
+    "accent": "#d64a9a",
+    "facts": {
+      "studio": "Studio Koba (España) — ed. Team17",
+      "director": "Dir. y guion: Eduardo Fornieles · Música: Salvador Fornieles",
+      "awards": "Unity Awards 2021: Mejores Visuales 2D",
+      "score": "Metacritic 74 (PC) · 78 (PS4)",
+      "site": "https://store.steampowered.com/app/1069530/Narita_Boy/",
+      "trivia": [
+        "Es el juego debut de Studio Koba y se financió por Kickstarter.",
+        "Rinde homenaje a la cultura pop de los años 80 con estética pixel-art y banda sonora synthwave.",
+        "Juegas como un héroe pixelado atrapado dentro del Reino Digital, luchando contra los Stallions con la Techno-espada."
+      ]
+    },
+    "scores": [
+      3,
+      3,
+      4,
+      4,
+      3,
+      2,
+      1,
+      1,
+      1,
+      2
+    ],
+    "pairs": [
+      "#2a5aaa",
+      "#d64a9a",
+      "#3ab4d4",
+      "#7a4aaa",
+      "#e0dcd8"
+    ],
+    "rot": null,
+    "cover": "covers/naritaboy"
+  },
+  {
+    "id": "whenpast",
+    "title": "When the Past Was Around",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2020,
+    "accent": "#7d6f5a",
+    "facts": {
+      "studio": "Mojiken Studio (Indonesia) — ed. Toge Productions / Chorus Worldwide",
+      "director": "Creación y arte: Brigitta Rena · Música: Masadito \"Ittou\" Bachtiar",
+      "awards": "SEA Game Awards 2019: Mejor Arte Visual",
+      "score": "Metacritic 77–91 (según plataforma)",
+      "site": "https://store.steampowered.com/app/1164050/When_The_Past_Was_Around/",
+      "trivia": [
+        "Narra sin diálogos ni texto la relación entre Eda y su amor, un búho antropomorfo.",
+        "Avanzas resolviendo puzzles tipo escape room dibujados a mano.",
+        "Es una obra deliberadamente breve (alrededor de una hora) sobre el amor y la pérdida."
+      ]
+    },
+    "scores": [
+      2,
+      2,
+      3,
+      2,
+      1,
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    "pairs": [
+      "#cbb896",
+      "#7d6f5a",
+      "#6a7550",
+      "#bfb46a",
+      "#e0ddd6"
+    ],
+    "rot": null,
+    "cover": "covers/whenpast"
+  },
+  {
+    "id": "mexico1921",
+    "title": "México 1921: Un Sueño Profundo",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2023,
+    "accent": "#b08890",
+    "facts": {
+      "studio": "Mácula Interactive (México) — juego debut del estudio",
+      "director": "Dir. Paola Vera",
+      "awards": "—",
+      "score": "Crítica mixta/positiva (Steam ~88% positivo)",
+      "site": "https://store.steampowered.com/app/1851090/Mexico_1921_A_Deep_Slumber/",
+      "trivia": [
+        "Está ambientado en la Ciudad de México posrevolucionaria y aborda el asesinato del presidente Álvaro Obregón.",
+        "Juegas como Juan Aguirre, un joven fotoperiodista; la fotografía es una mecánica central.",
+        "Aparecen figuras históricas reales como José Vasconcelos y Diego Rivera; cada objeto fotografiado aporta contexto cultural."
+      ]
+    },
+    "scores": [
+      4,
+      2,
+      4,
+      2,
+      3,
+      3,
+      1,
+      2,
+      1,
+      4
+    ],
+    "pairs": [
+      "#5f5560",
+      "#cbb086",
+      "#b08890",
+      "#8a4535",
+      "#8a9575"
+    ],
+    "rot": null,
+    "cover": "covers/mexico1921"
+  },
+  {
+    "id": "nightwoods",
+    "title": "Night in the Woods",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2017,
+    "accent": "#6aa5b5",
+    "facts": {
+      "studio": "Infinite Fall — ed. Finji",
+      "director": "Alec Holowka, Scott Benson y Bethany Hockenberry",
+      "awards": "BAFTA Games 2018: Mejor Narrativa",
+      "score": "Metacritic 88–91",
+      "site": "https://store.steampowered.com/app/481510/Night_in_the_Woods/",
+      "trivia": [
+        "Sigue a Mae Borowski, una universitaria que abandona la carrera y vuelve a su pueblo minero en decadencia, Possum Springs.",
+        "Su mundo está poblado por personajes animales antropomórficos.",
+        "Se financió por Kickstarter superando más de cuatro veces su meta de 50,000 USD."
+      ]
+    },
+    "scores": [
+      4,
+      2,
+      4,
+      3,
+      3,
+      2,
+      2,
+      1,
+      1,
+      3
+    ],
+    "pairs": [
+      "#4a5550",
+      "#6aa5b5",
+      "#4a8595",
+      "#9a4520",
+      "#8a8a8a"
+    ],
+    "rot": null,
+    "cover": "covers/nightwoods"
+  },
+  {
+    "id": "shorthike",
+    "title": "A Short Hike",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2019,
+    "accent": "#6aa585",
+    "facts": {
+      "studio": "Adam Robinson-Yu / adamgryu (Toronto, Canadá)",
+      "director": "Adam Robinson-Yu (proyecto casi en solitario) · Música: Mark Sparling",
+      "awards": "IGF 2020: Gran Premio Seumas McNally",
+      "score": "Aclamado (IGF 2020)",
+      "site": "https://ashorthike.com/",
+      "trivia": [
+        "Empezó en diciembre de 2018 como un descanso creativo del RPG que su autor desarrollaba, y creció hasta ser un juego completo.",
+        "Escalas el pico Hawk Peak buscando señal de teléfono, recogiendo Plumas Doradas para correr, trepar y planear.",
+        "Sus inspiraciones declaradas son Animal Crossing y Breath of the Wild."
+      ]
+    },
+    "scores": [
+      3,
+      3,
+      4,
+      4,
+      3,
+      3,
+      2,
+      2,
+      1,
+      5
+    ],
+    "pairs": [
+      "#e0952a",
+      "#a5bf3a",
+      "#6aa585",
+      "#c99a2a",
+      "#c99a95"
+    ],
+    "rot": null,
+    "cover": "covers/shorthike"
+  },
+  {
+    "id": "americanarcadia",
+    "title": "American Arcadia",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2023,
+    "accent": "#f0a83a",
+    "facts": {
+      "studio": "Out of the Blue (España) — ed. Raw Fury",
+      "director": "Dir. Tatiana Delgado",
+      "awards": "—",
+      "score": "Metacritic 77–81 · OpenCritic 79",
+      "site": "https://store.steampowered.com/app/1249040/American_Arcadia/",
+      "trivia": [
+        "Combina un plataformas 2.5D (Trevor) con secciones en primera persona en 3D (Angela) que se entrelazan.",
+        "Su premisa —una ciudad-reality retrofuturista de los 70 vigilada 24/7— se inspira abiertamente en The Truman Show.",
+        "El estudio hizo antes Call of the Sea; Trevor tiene la voz de Yuri Lowenthal."
+      ]
+    },
+    "scores": [
+      3,
+      3,
+      4,
+      3,
+      3,
+      3,
+      1,
+      2,
+      1,
+      4
+    ],
+    "pairs": [
+      "#f0a83a",
+      "#f0e0b0",
+      "#c0c4de",
+      "#a02525",
+      "#e0852a"
+    ],
+    "rot": null,
+    "cover": "covers/americanarcadia"
+  },
+  {
+    "id": "deathsdoor",
+    "title": "Death’s Door",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2021,
+    "accent": "#e86a95",
+    "facts": {
+      "studio": "Acid Nerve (Reino Unido) — ed. Devolver Digital",
+      "director": "Diseño: David Fenn y Mark Foster · Música: David Fenn",
+      "awards": "Golden Joystick 2021: Mejor Juego Independiente",
+      "score": "Metacritic 89 (Switch) · IGN 9/10",
+      "site": "https://store.steampowered.com/app/894020/Deaths_Door/",
+      "trivia": [
+        "Encarnas a un cuervo segador de almas que trabaja para una comisión que administra la muerte.",
+        "Su combate y diseño top-down se compararon con Zelda y con un tono más ligero que Dark Souls.",
+        "Es el segundo juego de Acid Nerve tras Titan Souls."
+      ]
+    },
+    "scores": [
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    "pairs": [
+      "#a03a55",
+      "#bcc9a5",
+      "#e86a95",
+      "#95a575",
+      "#a5c93a"
+    ],
+    "rot": null,
+    "cover": "covers/deathsdoor"
+  },
+  {
+    "id": "journey",
+    "title": "Journey",
+    "platform": "SteamDeck",
+    "year": 2024,
+    "relYear": 2012,
+    "accent": "#e8952a",
+    "facts": {
+      "studio": "Thatgamecompany — ed. Sony Computer Entertainment",
+      "director": "Dir. Jenova Chen · Música: Austin Wintory",
+      "awards": "D.I.C.E. 2013: Juego del Año · 5 BAFTA · Nominado al Grammy",
+      "score": "Metacritic 92",
+      "site": "https://store.steampowered.com/app/638230/Journey/",
+      "trivia": [
+        "No tiene diálogos: viajas como una figura encapuchada hacia una montaña luminosa en el desierto.",
+        "Su multijugador anónimo te empareja con desconocidos sin poder hablar entre ustedes.",
+        "Su banda sonora de Austin Wintory fue la primera de un videojuego nominada al Grammy."
+      ]
+    },
+    "scores": [
+      2,
+      3,
+      4,
+      4,
+      3,
+      3,
+      1,
+      2,
+      1,
+      1
+    ],
+    "pairs": [
+      "#6a1a15",
+      "#b5651a",
+      "#e8952a",
+      "#e0c088",
+      "#f5e0bc"
+    ],
+    "rot": null,
+    "cover": "covers/journey"
+  }
+]
