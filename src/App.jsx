@@ -9,11 +9,11 @@ import { loadCollection, saveCollection, makeBackup, parseBackup } from './lib/s
 import { downscaleImage, resolveCover } from './lib/images.js';
 import { playBlip, playOpen } from './lib/sfx.js';
 import { drawCard } from './lib/card.js';
-import { copyText, fmt, gameUrl, homeUrl, nativeShare, openShare, shareIntents } from './lib/share.js';
+import { copyText, downloadDataUrl, fmt, gameUrl, homeUrl, nativeShare, openShare, shareImageFile, shareIntents } from './lib/share.js';
 import { gameDetails } from './lib/rawg.js';
 import * as Tour from './lib/tournament.js';
 import Header from './components/Header.jsx';
-import { ViewBar, CompareBar, Filters, NoResults } from './components/Toolbar.jsx';
+import { ViewBar, CompareBar, Filters, NoResults, MobileControls } from './components/Toolbar.jsx';
 import StatsPanel from './components/StatsPanel.jsx';
 import Shelf, { DragGhost } from './components/Shelf.jsx';
 import Crate from './components/Crate.jsx';
@@ -53,7 +53,7 @@ export default class App extends Component {
     theme: null,
     dragId: null, ghost: null,
     openId: null, barsOn: false, fichaClosing: false, copiedShare: false,
-    view: 'shelf', spineMode: false, statsOpen: false,
+    view: 'shelf', spineMode: false, statsOpen: false, optionsOpen: false,
     tourStage: 'setup', tourMode: null, tour: null, tourReveal: null, tourAuto: false, tourUser: '',
     isMobile: false, crateIndex: 0, crateDrag: 0, forceMobile: false, crateStyle: 'crate',
     creatorOpen: false, editId: null, confirmDelete: false, draft: emptyDraft(),
@@ -250,7 +250,7 @@ export default class App extends Component {
     return [
       { key: 'x', title: t('shareX'), onClick: () => openShare(s.x) },
       { key: 'facebook', title: t('shareFb'), onClick: () => openShare(s.facebook) },
-      { key: 'threads', title: t('shareThreads'), onClick: () => openShare(s.threads) },
+      { key: 'tiktok', title: t('shareTikTok'), onClick: () => this.shareGameToTikTok(og) },
       { key: 'instagram', title: t('shareIg'), onClick: () => this.copy(msg + ' ' + url) },
       { key: 'whatsapp', title: t('shareWa'), onClick: () => openShare(s.whatsapp) },
       { key: 'share', title: t('shareNative'), onClick: async () => {
@@ -268,12 +268,30 @@ export default class App extends Component {
     return [
       { key: 'x', title: 'X', onClick: () => openShare(s.x) },
       { key: 'facebook', title: 'Facebook', onClick: () => openShare(s.facebook) },
-      { key: 'threads', title: 'Threads', onClick: () => openShare(s.threads) },
+      { key: 'tiktok', title: 'TikTok', onClick: () => this.shareTourToTikTok(msg) },
       { key: 'instagram', title: 'Instagram', onClick: () => this.copy(msg) },
       { key: 'whatsapp', title: 'WhatsApp', onClick: () => openShare(s.whatsapp) },
       { key: 'copy', title: this.t('shareCopy'), onClick: () => this.copy(msg) },
     ];
   }
+
+  // TikTok no acepta publicaciones desde un enlace web: se genera la tarjeta y se abre la hoja
+  // de compartir del teléfono para elegir TikTok. Sin esa hoja (p. ej. en computadora) se
+  // descarga la imagen. En ambos casos el texto queda copiado para pegarlo como descripción.
+  shareGameToTikTok = async (og) => {
+    const text = this.gameMessage(og) + ' ' + gameUrl(og);
+    await copyText(text);
+    const img = await drawCard(og, og.avgStr, { brand: CONFIG.brandName, platName: PLAT[og.platform], labels: this.labels, t: this.t });
+    const fileName = og.title.replace(/[^a-z0-9]+/gi, '-').toLowerCase() + '-paquer.png';
+    const r = await shareImageFile({ dataUrl: img, fileName, title: og.title, text });
+    if (r === 'unsupported') { downloadDataUrl(img, fileName); this.showToast(this.t('tiktokDownloaded')); }
+    else if (r === 'shared') this.showToast(this.t('tiktokShared'));
+  };
+
+  shareTourToTikTok = async (msg) => {
+    await copyText(msg);
+    this.showToast(this.t('tiktokTour'));
+  };
 
   makeCard = async (og) => {
     document.body.style.overflow = 'hidden';
@@ -422,6 +440,7 @@ export default class App extends Component {
   setShelf = () => this.setState({ view: 'shelf' });
   setTimeline = () => this.setState({ view: 'timeline', dragId: null, ghost: null });
   toggleStats = () => this.setState((s) => ({ statsOpen: !s.statsOpen }));
+  toggleOptions = () => this.setState((s) => ({ optionsOpen: !s.optionsOpen }));
   setCovers = () => this.setState({ spineMode: false });
   setSpines = () => this.setState({ spineMode: true });
 
@@ -541,9 +560,9 @@ export default class App extends Component {
         <div className="vignette" />
 
         <Header app={this} />
-        <ViewBar app={this} />
+        {s.isMobile ? <MobileControls app={this} /> : <ViewBar app={this} />}
         <CompareBar app={this} />
-        {s.view !== 'tour' && <Filters app={this} />}
+        {!s.isMobile && s.view !== 'tour' && <Filters app={this} />}
         {noResults && <NoResults app={this} />}
         {s.statsOpen && <StatsPanel app={this} />}
 

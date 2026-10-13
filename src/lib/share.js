@@ -21,7 +21,6 @@ export function shareIntents(msg, url) {
   return {
     x: 'https://twitter.com/intent/tweet?text=' + enc + (url ? '&url=' + eu : ''),
     facebook: 'https://www.facebook.com/sharer/sharer.php?u=' + (url ? eu : enc) + '&quote=' + enc,
-    threads: 'https://www.threads.net/intent/post?text=' + withUrl,
     whatsapp: 'https://api.whatsapp.com/send?text=' + withUrl,
   };
 }
@@ -56,4 +55,27 @@ export async function nativeShare({ title, text, url, imageUrl, fileName }) {
     if (e && e.name === 'AbortError') return true;
   }
   return false;
+}
+
+/**
+ * Comparte una imagen (data URL) con la hoja nativa del sistema, para elegir una app
+ * que no acepta enlaces web, como TikTok. Devuelve 'shared', 'aborted' o 'unsupported'.
+ */
+export async function shareImageFile({ dataUrl, fileName, title, text }) {
+  try {
+    const blob = await (await fetch(dataUrl)).blob();
+    const file = new File([blob], fileName, { type: blob.type || 'image/png' });
+    if (!navigator.canShare || !navigator.canShare({ files: [file] })) return 'unsupported';
+    await navigator.share({ files: [file], title, text });
+    return 'shared';
+  } catch (e) {
+    return e && e.name === 'AbortError' ? 'aborted' : 'unsupported';
+  }
+}
+
+export function downloadDataUrl(dataUrl, fileName) {
+  const a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = fileName;
+  a.click();
 }

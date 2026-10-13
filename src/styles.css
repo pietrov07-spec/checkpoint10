@@ -59,6 +59,7 @@ h1, h2 { margin: 0; font-weight: inherit; }
 .lang-btn { font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; padding: 10px 13px; border: none; cursor: pointer; background: rgba(255,255,255,.06); color: #8aa0bd; }
 .lang-btn.is-active { background: #f4d84b; color: #0d1a2b; }
 .handle { font-family: 'Chakra Petch', sans-serif; font-weight: 700; letter-spacing: 2px; color: #f7d9e6; background: #9b2f63; padding: 10px 18px; border-radius: 11px; font-size: 15px; }
+.label-short, .handle-mobile { display: none; }
 
 /* ---------- barras de control ---------- */
 .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; position: relative; z-index: 2; }
@@ -369,3 +370,49 @@ h1, h2 { margin: 0; font-weight: inherit; }
 .footer { position: relative; z-index: 2; margin-top: 48px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.07); font-size: 11px; line-height: 1.5; color: #6f849e; max-width: 760px; }
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 300; max-width: min(92vw, 520px); padding: 12px 18px; border-radius: 10px; font-family: 'Chakra Petch', sans-serif; font-size: 13px; color: #0d1a2b; background: #f4d84b; box-shadow: 0 12px 30px rgba(0,0,0,.5); }
 .toast-error { background: #e8908a; }
+
+/* ---------- celular ---------- */
+@media (max-width: 720px) {
+  .root { padding: 16px 16px 80px; }
+
+  /* encabezado: marca + sello arriba, acciones en una sola fila */
+  .header { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "brand handle" "actions actions"; gap: 14px 10px; align-items: center; }
+  .brand { grid-area: brand; gap: 10px; margin: 0; min-width: 0; }
+  .brand svg { width: 32px; height: 32px; }
+  .brand-name { font-size: 20px; }
+  .brand-tagline { font-size: 9px; letter-spacing: 1.5px; line-height: 1.3; }
+  .handle-desktop { display: none; }
+  .handle-mobile { display: block; grid-area: handle; font-size: 11px; letter-spacing: 1px; padding: 6px 10px; border-radius: 8px; }
+  .header-actions { grid-area: actions; flex-wrap: nowrap; gap: 8px; }
+  .lang-btn { padding: 10px 11px; font-size: 11px; }
+  .btn-compare, .btn-new { flex: 1; font-size: 11px; letter-spacing: .5px; padding: 11px 8px; white-space: nowrap; }
+  .label-long { display: none; }
+  .label-short { display: inline; }
+
+  /* vistas, buscador y panel de ajustes */
+  .m-controls { position: relative; z-index: 2; margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .m-views { display: flex; width: 100%; }
+  .m-views .seg { flex: 1; padding: 9px 4px; font-size: 11px; letter-spacing: .5px; white-space: normal; line-height: 1.15; }
+  .m-search-row { display: flex; gap: 8px; align-items: stretch; }
+  .m-search-row .search { flex: 1; min-width: 0; max-width: none; }
+  .m-options-btn { position: relative; font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 1px; color: #cdd9e6; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 11px; padding: 0 14px; min-height: 42px; cursor: pointer; white-space: nowrap; }
+  .m-options-btn.is-active { background: #f4d84b; border-color: #f4d84b; color: #0d1a2b; }
+  .m-dot { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: #f4d84b; }
+  .m-options { display: flex; flex-direction: column; gap: 8px; padding: 12px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; background: rgba(0,0,0,.2); }
+  .m-options .seg-group { width: 100%; flex-wrap: wrap; }
+  .m-options .seg-group-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .m-options .seg-group-chips::-webkit-scrollbar { display: none; }
+  .m-options .chip { flex-shrink: 0; }
+  .m-options .min-score { width: 100%; }
+  .m-options .min-score input { flex: 1; width: auto; }
+  .m-options-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 2px 4px 0; }
+
+  .compare-slots { margin-left: 0; width: 100%; }
+  .compare-slots .btn-versus { margin-left: auto; }
+
+  /* modales: menos margen para aprovechar el ancho */
+  .backdrop, .backdrop-ficha, .backdrop-card { padding: 10px; }
+  .modal { padding: 20px 16px; }
+  .ficha-share .vrule { display: none; }
+  .share-row { gap: 7px; }
+}
