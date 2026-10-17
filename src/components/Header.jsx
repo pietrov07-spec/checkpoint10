@@ -30,9 +30,9 @@ export default function Header({ app }) {
             <span className="label-long">{t('neww')}</span><span className="label-short">{t('newShort')}</span>
           </button>
         )}
-        <div className="handle handle-desktop">@_PAQUER</div>
+        <a className="handle handle-desktop" href={CONFIG.profileUrl} target="_blank" rel="noopener noreferrer" title="GitHub · @_PAQUER">@_PAQUER</a>
       </div>
-      <div className="handle handle-mobile" aria-hidden="true">@_PAQUER</div>
+      <a className="handle handle-mobile" href={CONFIG.profileUrl} target="_blank" rel="noopener noreferrer" title="GitHub · @_PAQUER">@_PAQUER</a>
     </header>
   );
 }

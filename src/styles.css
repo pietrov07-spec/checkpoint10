@@ -60,6 +60,8 @@ h1, h2 { margin: 0; font-weight: inherit; }
 .lang-btn { font-family: 'Chakra Petch', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px; padding: 10px 13px; border: none; cursor: pointer; background: rgba(255,255,255,.06); color: #8aa0bd; }
 .lang-btn.is-active { background: #f4d84b; color: #0d1a2b; }
 .handle { font-family: 'Chakra Petch', sans-serif; font-weight: 700; letter-spacing: 2px; color: #f7d9e6; background: #9b2f63; padding: 10px 18px; border-radius: 11px; font-size: 15px; }
+.handle { text-decoration: none; transition: filter .15s, box-shadow .15s; }
+.handle:hover { color: #fff; filter: brightness(1.15); box-shadow: 0 0 0 2px rgba(155,47,99,.35); }
 .label-short, .handle-mobile, .btn-theme { display: none; }
 
 /* ---------- barras de control ---------- */

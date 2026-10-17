@@ -5,6 +5,8 @@ export const CONFIG = {
   shelfStyle: 'plank', // 'plank' | 'flat'
   // Los análisis nuevos se agregan al proyecto (games.json) y se publican con GitHub + Vercel.
   showNewButton: false,
+  // Adónde lleva el sello @_PAQUER del encabezado.
+  profileUrl: 'https://github.com/pietrov07-spec',
   // El prototipo enlazaba a MapaMundial.html, que no venía en el export.
   // Define VITE_MAP_URL en .env para mostrar el botón MAPA.
   mapUrl: import.meta.env.VITE_MAP_URL || null,
