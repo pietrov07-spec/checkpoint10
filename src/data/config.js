@@ -7,9 +7,6 @@ export const CONFIG = {
   showNewButton: false,
   // Adónde lleva el sello @_PAQUER del encabezado.
   profileUrl: 'https://github.com/pietrov07-spec',
-  // El prototipo enlazaba a MapaMundial.html, que no venía en el export.
-  // Define VITE_MAP_URL en .env para mostrar el botón MAPA.
-  mapUrl: import.meta.env.VITE_MAP_URL || null,
 };
 
 export const PLAT = { Xbox: 'XBOX', PlayStation: 'PLAYSTATION', Switch: 'NINTENDO SWITCH', SteamDeck: 'STEAM DECK' };

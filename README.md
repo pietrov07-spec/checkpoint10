@@ -85,6 +85,5 @@ La lista de consolas por juego (`search` en `links.json`) se armó con informaci
 
 ## Pendientes conocidos
 
-- **Botón MAPA**: el prototipo enlazaba a `MapaMundial.html`, que no venía en el export. Se oculta hasta que definas `VITE_MAP_URL`.
 - **Sonido al abrir ficha**: el prototipo esperaba `assets/sfx/open.mp3`, que tampoco venía. Pon el archivo en `public/sfx/open.mp3` y se activa solo.
 - Los juegos creados en la app viven en cada navegador; para compartirlos entre dispositivos usa Respaldo/Restaurar o, a futuro, un backend (p. ej. Supabase).

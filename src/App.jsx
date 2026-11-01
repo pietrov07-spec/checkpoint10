@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, Suspense, lazy } from 'react';
 import BASE_GAMES from './data/games.json';
 import es from './i18n/es.json';
 import en from './i18n/en.json';
@@ -23,6 +23,9 @@ import Ficha from './components/Ficha.jsx';
 import Versus from './components/Versus.jsx';
 import CardModal from './components/CardModal.jsx';
 import Creator from './components/Creator.jsx';
+
+// El mapa y su geometría se descargan solo al abrirlo.
+const WorldMap = lazy(() => import('./components/WorldMap.jsx'));
 
 const I18N = { es, en };
 const BASE_IDS = BASE_GAMES.map((g) => g.id);
@@ -63,6 +66,7 @@ export default class App extends Component {
     isMobile: false, crateIndex: 0, crateDrag: 0, forceMobile: false, crateStyle: 'crate',
     creatorOpen: false, editId: null, confirmDelete: false, draft: emptyDraft(),
     cardOpen: false, cardBusy: false, cardImg: null, cardTitle: '',
+    mapOpen: false,
     toast: null,
   };
 
@@ -219,7 +223,7 @@ export default class App extends Component {
     this.setState({ fichaClosing: true });
     clearTimeout(this._closeT);
     this._closeT = setTimeout(() => {
-      document.body.style.overflow = '';
+      if (!this.state.mapOpen) document.body.style.overflow = '';
       this.setState({ openId: null, barsOn: false, copiedShare: false, fichaClosing: false });
     }, 300);
     document.title = CONFIG.brandName;
@@ -436,6 +440,10 @@ export default class App extends Component {
     this.setState({ ...data, order }, async () => { await this.persist(); this.showToast(this.t('restoreOk')); });
   };
 
+  // ---------- mapa ----------
+  openMap = () => { playOpen(); document.body.style.overflow = 'hidden'; this.setState({ mapOpen: true }); };
+  closeMap = () => { playBlip('close'); document.body.style.overflow = ''; this.setState({ mapOpen: false }); };
+
   // ---------- filtros, vistas, comparar ----------
   tabPlatform = () => this.setState({ groupBy: 'platform', dragId: null, ghost: null });
   tabYear = () => this.setState({ groupBy: 'year', dragId: null, ghost: null });
@@ -598,6 +606,7 @@ export default class App extends Component {
         <footer className="footer">{this.t('footerLegal')}</footer>
 
         <DragGhost app={this} />
+        {s.mapOpen && <Suspense fallback={null}><WorldMap app={this} /></Suspense>}
         {s.openId && <Ficha app={this} />}
         {s.versusOpen && <Versus app={this} />}
         {s.cardOpen && <CardModal app={this} />}

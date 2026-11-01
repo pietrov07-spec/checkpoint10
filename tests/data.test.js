@@ -8,6 +8,7 @@ import { avgOf, collectionStats, matchGame, versusWins } from '../src/lib/stats.
 import { hexToHsl, hslToHex, shadesFrom } from '../src/lib/colors.js';
 import { gameLinks, storeSearchUrl } from '../src/lib/links.js';
 import { PLATORDER } from '../src/data/config.js';
+import origins from '../src/data/origins.json';
 
 describe('datos de la colección', () => {
   it('cada juego tiene 10 calificaciones de 0 a 5, 5 colores y plataforma válida', () => {
@@ -34,6 +35,15 @@ describe('datos de la colección', () => {
       const l = gameLinks(g, t, 'es');
       expect(l.length, g.id).toBeGreaterThan(0);
       l.forEach((x) => expect(x.url).toMatch(/^https:\/\//));
+    }
+  });
+
+  it('cada juego tiene un lugar de origen válido para el mapa', () => {
+    for (const g of games) {
+      const place = origins.places[origins.games[g.id]];
+      expect(place, g.id).toBeTruthy();
+      expect(Math.abs(place.lat) <= 90 && Math.abs(place.lon) <= 180, g.id).toBe(true);
+      expect(place.es && place.en, g.id).toBeTruthy();
     }
   });
 

@@ -21,7 +21,7 @@ export default function Header({ app }) {
           <button type="button" className={'lang-btn' + on(state.lang === 'es')} aria-pressed={state.lang === 'es'} onClick={app.setLangEs}>ES</button>
           <button type="button" className={'lang-btn' + on(state.lang === 'en')} aria-pressed={state.lang === 'en'} onClick={app.setLangEn}>EN</button>
         </div>
-        {CONFIG.mapUrl && <a href={CONFIG.mapUrl} className="btn-outline">{t('map')}</a>}
+        <button type="button" className="btn-outline btn-map" onClick={app.openMap}>{t('map')}</button>
         <button type="button" className={'btn-compare' + on(state.compareMode)} onClick={app.toggleCompareMode}>{t('compare')}</button>
         {/* Solo en el celular: el tema junto a Comparar; cada toque cambia al siguiente. */}
         <button type="button" className="btn-theme" onClick={app.cycleTheme} aria-label={t('theme') + ': ' + t(THEMES[app.themeKey].labelKey)}>◐ {t(THEMES[app.themeKey].labelKey)}</button>

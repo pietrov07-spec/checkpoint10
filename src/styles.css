@@ -565,3 +565,37 @@ h1, h2 { margin: 0; font-weight: inherit; }
 /* pie */
 .theme-marfil .footer { color: #8a8478; border-top-color: rgba(0,0,0,.08); }
 .theme-marfil .swatch[aria-pressed="true"] { border-color: var(--ink) !important; }
+
+/* ---------- mapa ---------- */
+.backdrop-map { z-index: 110; background: rgba(4,10,18,.82); }
+.modal-map { max-width: 1000px; max-height: 94vh; background: linear-gradient(180deg,#102138,#0b1626); border-radius: 18px; }
+.map-title { font-family: 'Archivo Black', sans-serif; font-size: 22px; margin: 0 44px 4px 0; color: #fff; }
+.map-sub { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.map-views { margin-bottom: 14px; }
+.map-svg { display: block; width: 100%; height: auto; background: rgba(120,170,220,.07); border-radius: 12px; }
+.map-land { fill: rgba(205,217,230,.2); stroke: rgba(205,217,230,.28); stroke-width: .15; vector-effect: non-scaling-stroke; }
+.map-pin { cursor: pointer; outline: none; }
+.map-pin-hit { fill: transparent; }
+.map-pin-dot { fill: var(--gold); stroke: #0b1626; transition: fill .15s; }
+.map-pin.is-approx .map-pin-dot { fill: #0b1626; stroke: var(--gold); }
+.map-pin:hover .map-pin-dot, .map-pin:focus-visible .map-pin-dot, .map-pin.is-selected .map-pin-dot { fill: #fff; stroke: var(--gold); }
+.map-pin-n { fill: #0b1626; font-family: 'Chakra Petch', sans-serif; font-weight: 700; text-anchor: middle; pointer-events: none; }
+.map-legend { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); margin: 10px 0 16px; }
+.map-legend-dot { flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--gold); }
+.map-all { margin-bottom: 12px; }
+.map-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.map-place { padding: 12px; border: 1px solid rgba(255,255,255,.08); border-radius: 12px; background: rgba(255,255,255,.03); }
+.map-place-name { font-size: 11px; letter-spacing: 1px; color: var(--gold-dim); margin-bottom: 8px; }
+.map-game { display: flex; align-items: center; gap: 10px; width: 100%; padding: 4px; border: none; border-radius: 8px; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.map-game:hover { background: rgba(255,255,255,.06); }
+.map-game-thumb { display: block; flex-shrink: 0; width: 40px; height: 40px; border-radius: 6px; overflow: hidden; position: relative; }
+.map-game-title { font-size: 14px; font-weight: 700; }
+.theme-marfil .map-title { color: var(--ink); }
+.theme-marfil .map-svg { background: rgba(70,110,150,.1); }
+.theme-marfil .map-land { fill: rgba(90,80,65,.28); stroke: rgba(90,80,65,.4); }
+.theme-marfil .map-pin-dot { stroke: #fffdf9; }
+.theme-marfil .map-pin.is-approx .map-pin-dot { fill: #fffdf9; stroke: var(--gold); }
+.theme-marfil .map-pin:hover .map-pin-dot, .theme-marfil .map-pin:focus-visible .map-pin-dot, .theme-marfil .map-pin.is-selected .map-pin-dot { fill: var(--ink); stroke: var(--gold); }
+.theme-marfil .map-pin-n { fill: #fff; }
+.theme-marfil .map-place { background: #fff; border-color: rgba(30,30,40,.08); }
+.theme-marfil .map-game:hover { background: rgba(0,0,0,.05); }
